@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>sticky business</title>
+<link rel="stylesheet" href="test3.css" />
+<script src="test3.js" defer></script>
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 20%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  
+  display: none;
+  height: 10000px;
+  
+
+}
+#navbar{
+    
+    
+    float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  
+  text-decoration: none;
+  font-size: 17px;
+  top: 0;
+  width: 100%;
+  
+}
+.sticky{
+  position: fixed;
+  
+  top: 0;
+  width: 100%;
+}
+
+
+#Overview {background-color: white;}
+#Services {background-color: green;padding: 10vw 0em;}
+#Contact {background-color: blue;padding: 10vw 0em;}
+#Mission {background-color: orange;padding: 10vw 0em;}
+#Consultants {background-color: orange;padding: 10vw 0em;}
+</style>
+</head>
+<body>
+<div class="nav" id="navbar">
+<button class="tablink" onclick="openPage('Overview', this, 'red')" id="defaultOpen">Overview</button>
+<button class="tablink" onclick="openPage('Services', this, 'green')">Services</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+<button class="tablink" onclick="openPage('Mission', this, 'orange')">Mission</button>
+<button class="tablink" onclick="openPage('Consultants', this, 'orange')">Consultants</button>
+
+</div>
+<div id="Overview" class="tabcontent">
+  
+  <header id="header">
+  
+  
+    <h1>Welcome to Sticky</h1>
+    <p>
+      <a href="" target="_blank">by Peter Jang</a>
+    </p>
+    <section id="main-content">
+    <h2 >Main content</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+      sed diam nonummy nibh euismod tincidunt ut laoreet
+      dolore magna aliquam erat volutpat. Ut wisi enim ad minim 
+      veniam, quis nostrud exerci tation ullamcorper
+      suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      Duis autem vel eum iriure dolor in hendrerit in
+      vulputate velit esse molestie consequat, vel illum dolore 
+      eu feugiat nulla facilisis at vero eros et accumsan
+      et iusto odio dignissim qui blandit praesent luptatum zzril 
+      delenit augue duis dolore te feugait nulla.
+    </p>
+  </section>
+  </header>
+  <div class="parallax" data-rellax-speed="1">
+    
+  </div>
+  <section>
+    <h2>More content</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+      sed diam nonummy nibh euismod tincidunt ut laoreet
+      dolore magna aliquam erat volutpat. Ut wisi enim ad minim 
+      veniam, quis nostrud exerci tation ullamcorper
+      suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      Duis autem vel eum iriure dolor in hendrerit in
+      vulputate velit esse molestie consequat, vel illum dolore 
+      eu feugiat nulla facilisis at vero eros et accumsan
+      et iusto odio dignissim qui blandit praesent luptatum zzril 
+      delenit augue duis dolore te feugait nulla.
+    </p>
+    </section>
+    <section>
+    <h2>Even more content</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, 
+      sed diam nonummy nibh euismod tincidunt ut laoreet
+      dolore magna aliquam erat volutpat. Ut wisi enim ad minim 
+      veniam, quis nostrud exerci tation ullamcorper
+      suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      Duis autem vel eum iriure dolor in hendrerit in
+      vulputate velit esse molestie consequat, vel illum dolore 
+      eu feugiat nulla facilisis at vero eros et accumsan
+      et iusto odio dignissim qui blandit praesent luptatum zzril 
+      delenit augue duis dolore te feugait nulla.
+    </p>
+    </section>
+</div>
+
+<div id="Services" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>Contact</h3>
+  <p>Get in touch, or swing by for a cup of coffee.</p>
+</div>
+
+<div id="Mission" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+<div id="Consultants" class="tabcontent">
+  <h3>About</h3>
+  <p>Who we are and what we do.</p>
+</div>
+
+
+   
+</body>
+<script>
+  window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+    
+    if (window.pageYOffset >= 0) {
+      navbar.classList.add("sticky")
+    } else {
+      navbar.classList.remove("sticky");
+    }
+    if (window.pageYOffset >= 450) {
+      navbar.classList.remove("sticky")
+    }
+    if (window.pageYOffset >= 705) {
+          navbar.classList.add("sticky");
+    }   
+}
+
+
+</script>
+</html> 
