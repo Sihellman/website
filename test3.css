@@ -51,6 +51,7 @@
     height: 600px;
     color: white;
     
+    
   }
   body, html {
     height: 100%;
@@ -83,4 +84,7 @@
       text-align: center;
       margin-left: 20px;
       margin-right: 20px;
+  }
+  #Services{
+    height: 700px;
   }
